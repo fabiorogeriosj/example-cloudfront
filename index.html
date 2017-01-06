@@ -1,0 +1,91 @@
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>LoremChat</title>
+      <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+      <link href="/css/estilo.css" rel="stylesheet">
+   </head>
+   <body>
+      <div id="fb-root"></div>
+      <script src="http://connect.facebook.net/pt_BR/all.js"></script>
+      <div id="notificacao"><img src="/img/key-up.png"> <span>x novas mensagens não lidas</span></div>
+      <div class="editor">
+        <button id="lodin-fb" type="button">Logar com Facebook para enviar mensagens na sala <strong>viagem</strong></button>
+        <span id="aviso">Para ver as mensagens em tempo real você precisa estar logado!</span>
+        <input type="text" id="editor" disabled="true" placeholder="Entrando na sala viagem..." autofocus="true">
+      </div>
+      <div class="chat"></div>
+      <div class="salas">
+         <img src="/img/menu-button-of-three-horizontal-lines.png" id="iconmenu">
+         <h2>Salas oficiais</h2>
+         <a href="/geral">
+            <div class="sala">
+               <img src="/img/megaphone.png">
+               <h1>
+                  geral
+                  <p>Assunto geral que rola no mundo!</p>
+               </h1>
+            </div>
+         </a>
+         <a href="/música">
+            <div class="sala">
+               <img src="/img/headphones.png">
+               <h1>
+                  música
+                  <p>Trocar ideias no estilo musical ;)</p>
+               </h1>
+            </div>
+         </a>
+         <a href="/filme">
+            <div class="sala">
+               <img src="/img/youtube.png">
+               <h1>
+                  filme
+                  <p>O que ta rolando sobre filmes, séries e novelas?</p>
+               </h1>
+            </div>
+         </a>
+         <a href="/festa">
+            <div class="sala">
+               <img src="/img/theater.png">
+               <h1>
+                  festa
+                  <p>Aquela festa animal! Onde? Quando? #bora!</p>
+               </h1>
+            </div>
+         </a>
+         <a href="/viagem">
+            <div class="sala principal">
+               <img src="/img/airplane.png">
+               <h1>
+                  viagem
+                  <p>O mundo é grande de mais para ficar apenas em um lugar!</p>
+               </h1>
+            </div>
+         </a>
+         <a href="/universidade">
+            <div class="sala">
+               <img src="/img/mortarboard.png">
+               <h1>
+                  universidade
+                  <p>Duas canetas um papel e bora pro papo de universitários :)</p>
+               </h1>
+            </div>
+         </a>
+         <h2></h2>
+         <a onclick="criarNovaSala()" id="linkNovaSala" class="new">Criar uma sala</a>
+         <h2 class="form">Crie sua sala</h2>
+         <form id="formnovasala" method="GET" action="/" class="form">
+            <input id="novasala" placeholder="Digite o nome da sala">
+            <p>Apenas os usuários com o link desta sala poderam participar da conversa!</p>
+            <button type="submit">Criar nova sala</button>
+         </form>
+         <div id="footer"></div>
+      </div>
+      <script src="/js/jquery-3.1.1.min.js"></script>
+      <script src="/js/moment.min.js"></script>
+      <script src="/js/moment-with-locales.min.js"></script>
+      <script src="/js/script.js"></script>
+   </body>
+</html>

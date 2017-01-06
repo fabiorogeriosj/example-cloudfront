@@ -1,0 +1,208 @@
+body, html {
+  background-color: #f2f2f2;
+  color: #555555;
+}
+* {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+.salas {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0 0 5px #a2a2a2;
+  padding: 5px;
+  width: 250px;
+  overflow-x: hidden;
+  min-height: 100%;
+}
+.salas h2 {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 5px;
+}
+.salas a {
+  text-decoration: none;
+}
+.salas .sala,
+.salas .usuario,
+.chat .mensagem {
+  display: flex;
+  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.salas .sala {
+  cursor: pointer;
+}
+.salas form.form {
+  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: none;
+}
+.salas h2.form {
+  display: none;
+}
+.salas a.new{
+  color: #009688;
+  text-decoration: underline;
+  font-size: 13px;
+  margin: 10px;
+  cursor: pointer;
+}
+.salas .form input {
+  width: 100%;
+  padding: 7px;
+}
+.salas .form button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #3d9141;
+  color: #fff;
+  font-size: 14px;
+  width: 100%;
+  border:1px solid #296a2d;
+  padding: 7px;
+}
+.salas .sala:hover {
+  background-color: #e7e7e7;
+}
+.salas .sala.principal,
+.chat .mensagem.principal {
+  border-right: 4px solid #8dc48f;
+}
+.salas img,
+.mensagem img {
+  height: 37px;
+  float: left;
+  margin-right: 5px;
+}
+.salas img {
+  margin-right: 10px;
+}
+.salas h1,
+.mensagem h1 {
+  margin: 0;
+  font-size: 14px;
+  float: left;
+  color: #555555;
+}
+.salas p,
+.mensagem p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+}
+.mensagem p {
+  font-size: 14px;
+}
+.editor {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 0 5px #a2a2a2;
+}
+.editor input {
+  padding: 10px;
+  padding-right: 280px;
+  border:none;
+  font-size: 14px;
+  width: 100%;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 37px;
+}
+.chat {
+  padding: 10px;
+  padding-top: 60px;
+  padding-right: 270px;
+}
+.chat .mensagem h1 span {
+  font-weight: 400;
+  font-size: 11px;
+  color: #676767;
+  margin-left: 10px;
+}
+#aviso {
+  display: none;
+}
+#lodin-fb {
+  background: #4267b2;
+  border: 1px solid #4267b2;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 7px;
+  margin: 10px;
+  margin-left: 15px;
+  display: none;
+}
+#bt-sair {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: #4267b2;
+  border: 1px solid #4267b2;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 12px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #b2b2b2;
+  padding: 10px;
+  font-size: 12px;
+}
+#notificacao {
+  border:1px solid #517cdc;
+  position: fixed;
+  border-radius: 4px;
+  background-color: #6594fc;
+  color: #fff;
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  top: -40px;
+  text-align: center;
+  left: 50%;
+  margin-left: -250px;
+  cursor: pointer;
+}
+#notificacao img {
+  float: left;
+  margin-right: 10px;
+  width: 20px;
+}
+#iconmenu {
+  display: none;
+  position: absolute;
+  margin-left: -21px;
+  height: 25px;
+}
+@media (max-width: 600px) {
+  .salas {
+    margin-right: -240px;
+  }
+  .chat {
+    padding-right: 20px;
+  }
+  .editor input {
+    padding-right: 30px;
+  }
+  #iconmenu {
+    display: block;
+  }
+}
